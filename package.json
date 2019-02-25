@@ -1,0 +1,31 @@
+{
+  "name": "@urbica/react-map-gl-draw",
+  "version": "0.1.0",
+  "main": "dist/react-map-gl-draw.cjs.js",
+  "module": "dist/react-map-gl-draw.esm.js",
+  "scripts": {
+    "start": "npm run styleguide",
+    "build": "rollup -c",
+    "styleguide": "styleguidist server"
+  },
+  "peerDependencies": {
+    "@mapbox/mapbox-gl-draw": "1.1.1",
+    "@urbica/react-map-gl": "0.7.0-beta.1",
+    "react": "16.8.3",
+    "react-dom": "16.8.3"
+  },
+  "devDependencies": {
+    "@mapbox/mapbox-gl-draw": "1.1.1",
+    "@urbica/react-map-gl": "0.7.0-beta.1",
+    "eslint-config-urbica": "1.0.0",
+    "immutable": "4.0.0-rc.12",
+    "mapbox-gl": "0.53.0",
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-scripts": "2.1.5",
+    "react-styleguidist": "9.0.1",
+    "rollup": "1.2.3",
+    "rollup-plugin-commonjs": "9.2.1",
+    "webpack": "4.29.5"
+  }
+}
