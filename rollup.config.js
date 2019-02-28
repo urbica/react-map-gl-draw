@@ -1,3 +1,4 @@
+import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import pkg from './package.json';
 
@@ -15,6 +16,7 @@ export default {
     '@urbica/react-map-gl'
   ],
   plugins: [
+    babel({exclude: 'node_modules/**'}),
     commonjs()
   ]
 };

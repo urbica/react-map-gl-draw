@@ -6,8 +6,6 @@ import MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
 import theme from '@mapbox/mapbox-gl-draw/src/lib/theme';
 import modes from '@mapbox/mapbox-gl-draw/src/modes';
 import type { EventProps } from './eventProps';
-import events from './events';
-import capitalizeFirstLetter from '../../utils/capitalizeFirstLetter';
 
 export type Props = EventProps & {
   /** Draw controls position */
@@ -141,24 +139,84 @@ class Draw extends React.PureComponent<Props> {
     }, this.props.position);
 
     map.addControl(draw);
+    map.on('draw.create', this._onDrawCreate);
+    map.on('draw.delete', this._onDrawDelete);
+    map.on('draw.combine', this._onDrawCombine);
+    map.on('draw.uncombine', this._onDrawUncombine);
+    map.on('draw.update', this._onDrawUpdate);
+    map.on('draw.selectionchange', this._onDrawSelectionchange);
+    map.on('draw.modechange', this._onDrawModechange);
+    map.on('draw.render', this._onDrawRender);
+    map.on('draw.actionable', this._onDrawActionable);
 
-    events.forEach((event) => {
-      const propName = `on${capitalizeFirstLetter(event)}`;
-      if (this.props[propName]) {
-        map.on(event, this.props[propName]);
-      }
-    });
-
-    draw.add(this.props.data);
+    if (this.props.data) {
+      draw.add(this.props.data);
+    }
 
     // $FlowFixMe
     this._draw = draw;
   }
 
   componentDidUpdate() {
-    // $FlowFixMe
-    this._draw.set(this.props.data);
+    if (this.props.data) {
+      // $FlowFixMe
+      this._draw.set(this.props.data);
+    }
   }
+
+  _onDrawCreate = (event: Object) => {
+    if (this.props.onDrawCreate) {
+      this.props.onDrawCreate(event);
+    }
+  };
+
+  _onDrawDelete = (event: Object) => {
+    if (this.props.onDrawDelete) {
+      this.props.onDrawDelete(event);
+    }
+  };
+
+  _onDrawCombine = (event: Object) => {
+    if (this.props.onDrawCombine) {
+      this.props.onDrawCombine(event);
+    }
+  };
+
+  _onDrawUncombine = (event: Object) => {
+    if (this.props.onDrawUncombine) {
+      this.props.onDrawUncombine(event);
+    }
+  };
+
+  _onDrawUpdate = (event: Object) => {
+    if (this.props.onDrawUpdate) {
+      this.props.onDrawUpdate(event);
+    }
+  };
+
+  _onDrawSelectionchange = (event: Object) => {
+    if (this.props.onDrawSelectionChange) {
+      this.props.onDrawSelectionChange(event);
+    }
+  };
+
+  _onDrawModechange = (event: Object) => {
+    if (this.props.onDrawModeChange) {
+      this.props.onDrawModeChange(event);
+    }
+  };
+
+  _onDrawRender = (event: Object) => {
+    if (this.props.onDrawRender) {
+      this.props.onDrawRender(event);
+    }
+  };
+
+  _onDrawActionable = (event: Object) => {
+    if (this.props.onDrawActionable) {
+      this.props.onDrawActionable(event);
+    }
+  };
 
   render() {
     return React.createElement(MapContext.Consumer, {}, (map) => {
