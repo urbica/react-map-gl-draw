@@ -1,10 +1,11 @@
 {
-  "main.js": "/build/main.fab3b34e.js",
+  "main.js": "/build/main.2ed3e0fc.js",
   "runtime~main.js": "/build/bundle.83e147d9.js",
-  "static/css/2.74429ca5.chunk.css": "/static/css/2.74429ca5.chunk.css",
-  "build/2.4fe0f3a6.js": "/build/2.4fe0f3a6.js",
+  "static/css/2.648a87ef.chunk.css": "/static/css/2.648a87ef.chunk.css",
+  "build/2.6f2928d2.js": "/build/2.6f2928d2.js",
   "index.html": "/index.html",
-  "precache-manifest.479bbc165b80e928b2ebe11965791b8f.js": "/precache-manifest.479bbc165b80e928b2ebe11965791b8f.js",
+  "precache-manifest.499b591b9f6a269e8f531ff46d1928c4.js": "/precache-manifest.499b591b9f6a269e8f531ff46d1928c4.js",
   "service-worker.js": "/service-worker.js",
-  "static/css/2.74429ca5.chunk.css.map": "/static/css/2.74429ca5.chunk.css.map"
+  "static/css/2.648a87ef.chunk.css.map": "/static/css/2.648a87ef.chunk.css.map",
+  "static/media/basic-usage.md": "/static/media/basic-usage.0d419061.md"
 }
