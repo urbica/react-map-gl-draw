@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npm run styleguide",
     "build": "rollup -c",
-    "styleguide": "styleguidist server"
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
+    "styleguide:deploy": "gh-pages -d styleguide"
   },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "1.1.1",
@@ -21,6 +23,7 @@
     "@urbica/react-map-gl": "0.7.0-beta.1",
     "eslint-config-urbica": "1.0.0",
     "flow-bin": "0.93.0",
+    "gh-pages": "2.0.1",
     "immutable": "4.0.0-rc.12",
     "mapbox-gl": "0.53.0",
     "react": "16.8.3",
