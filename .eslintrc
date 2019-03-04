@@ -1,5 +1,4 @@
 {
-  "parser": "babel-eslint",
   "extends": "urbica/react",
   "rules": {
     "import/no-extraneous-dependencies": [
