@@ -12,7 +12,7 @@ module.exports = {
       name: 'Examples',
       components: () => [
         'docs/basic-usage.md',
-        'docs/get-features.md'
+        'docs/set-initial-features.md'
       ],
       exampleMode: 'expand'
     },

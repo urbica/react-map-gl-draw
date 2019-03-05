@@ -4,7 +4,20 @@ import MapGL from '@urbica/react-map-gl';
 import Draw from '@urbica/react-map-gl-draw';  
 
 initialState = {
-  features: []
+  data: {
+    type: "FeatureCollection",
+    features: [{
+      type: "Feature",
+      properties:{},
+      geometry: {
+        coordinates: [
+          -122.41411987304815,
+          37.792209769935084
+        ],
+      type: "Point"
+      }
+    }]
+  }
 };
 
 <>
@@ -17,12 +30,12 @@ initialState = {
     zoom={11}
   >
     <Draw
-      onDrawCreate={({features}) => setState({features})}
-      onDrawUpdate={({features}) => setState({features})}
+      data={state.data}
+      onChange={(data) => setState({data})}
     />
   </MapGL>
   <div>
-    {JSON.stringify(state.features)}
+    {JSON.stringify(state.data)}
   </div>
 </>
 ```
