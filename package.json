@@ -9,7 +9,8 @@
     "build:watch": "rollup -c -w",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "styleguide:deploy": "gh-pages -d styleguide"
+    "styleguide:deploy": "gh-pages -d styleguide",
+    "release": "standard-version"
   },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.1",
@@ -33,6 +34,7 @@
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-node-resolve": "^4.0.1",
+    "standard-version": "^5.0.1",
     "webpack": "^4.29.6"
   }
 }
