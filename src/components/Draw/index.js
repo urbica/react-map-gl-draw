@@ -65,13 +65,11 @@ export type Props = {
   /** Over ride the default modes with your own. */
   modes?: Object,
 
-  /** The mode that user will first land in. */
-  defaultMode?:
-    'simple_select'
-    | 'direct_select'
-    | 'draw_line_string'
-    | 'draw_polygon'
-    | 'draw_point',
+  /** The mode that will used. */
+  mode?: String,
+
+  /** The mode options. */
+  modeOptions?: Object,
 
   /**
    * Properties of a feature will also be available for styling
@@ -223,7 +221,8 @@ class Draw extends React.PureComponent<Props> {
     displayControlsDefault: true,
     styles: theme,
     modes,
-    defaultMode: 'simple_select',
+    mode: 'simple_select',
+    modeOptions: {},
     userProperties: false,
     data: null,
     onDrawCreate: null,
@@ -258,7 +257,8 @@ class Draw extends React.PureComponent<Props> {
       displayControlsDefault: this.props.displayControlsDefault,
       styles: this.props.styles,
       modes: this.props.modes,
-      defaultMode: this.props.defaultMode,
+      defaultMode: this.props.mode,
+      modeOptions: this.props.modeOptions,
       userProperties: this.props.userProperties
     }, this.props.position);
 
@@ -286,10 +286,14 @@ class Draw extends React.PureComponent<Props> {
     this._draw = draw;
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.props.data) {
       // $FlowFixMe
       this._draw.set(this.props.data);
+    }
+
+    if (prevProps.mode !== this.props.mode) {
+      this._draw.changeMode(this.props.mode);
     }
   }
 
