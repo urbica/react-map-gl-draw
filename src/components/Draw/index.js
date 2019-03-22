@@ -258,7 +258,6 @@ class Draw extends React.PureComponent<Props> {
       styles: this.props.styles,
       modes: this.props.modes,
       defaultMode: this.props.mode,
-      modeOptions: this.props.modeOptions,
       userProperties: this.props.userProperties
     }, this.props.position);
 
@@ -286,14 +285,15 @@ class Draw extends React.PureComponent<Props> {
     this._draw = draw;
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps: Props) {
     if (this.props.data) {
       // $FlowFixMe
       this._draw.set(this.props.data);
     }
 
     if (prevProps.mode !== this.props.mode) {
-      this._draw.changeMode(this.props.mode);
+      // $FlowFixMe
+      this._draw.changeMode(this.props.mode, this.props.modeOptions);
     }
   }
 
