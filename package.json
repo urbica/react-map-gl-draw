@@ -1,6 +1,6 @@
 {
   "name": "@urbica/react-map-gl-draw",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/react-map-gl-draw.cjs.js",
   "module": "dist/react-map-gl-draw.esm.js",
   "scripts": {

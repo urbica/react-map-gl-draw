@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.1](https://github.com/urbica/react-map-gl-draw/compare/v0.1.0...v0.1.1) (2019-03-22)
+
+
+### Bug Fixes
+
+* 🐛 check, if map exists on componnetWillUnmount ([919ea7c](https://github.com/urbica/react-map-gl-draw/commit/919ea7c))
+
+
+
 # 0.1.0 (2019-03-05)
 
 
