@@ -1,6 +1,6 @@
 # Urbica React Draw tools for Mapbox GL JS
 
-React Component for Draw tools for Mapbox GL JS.
+React Component to enhance [Urbica's React Map GL](https://github.com/urbica/react-map-gl) to use Mapbox Draw tools.
 
 [Mapbox Draw tools](https://github.com/mapbox/mapbox-gl-draw) adds support for drawing and editing features on [mapbox-gl.js](https://github.com/mapbox/mapbox-gl-js) maps.
 
