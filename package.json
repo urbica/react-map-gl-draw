@@ -1,6 +1,6 @@
 {
   "name": "@urbica/react-map-gl-draw",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React Component for Mapbox GL Draw",
   "repository": {
     "type": "git",
