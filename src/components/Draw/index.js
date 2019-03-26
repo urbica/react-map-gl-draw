@@ -307,6 +307,11 @@ class Draw extends React.PureComponent<Props> {
     this._draw.onRemove();
   }
 
+  getDraw() {
+    // $FlowFixMe
+    return this._draw;
+  }
+
   _onChange = () => {
     const { onChange } = this.props;
 
