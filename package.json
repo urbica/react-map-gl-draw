@@ -15,7 +15,8 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "styleguide:deploy": "gh-pages -d styleguide",
-    "release": "standard-version"
+    "release": "standard-version",
+    "cz": "git-cz"
   },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.1",
@@ -29,6 +30,7 @@
     "eslint-config-urbica": "^2.0.0",
     "flow-bin": "^0.95.1",
     "gh-pages": "^2.0.1",
+    "git-cz": "^3.0.1",
     "mapbox-gl": "^0.53.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
