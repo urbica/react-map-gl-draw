@@ -62,8 +62,11 @@ export type Props = {
   /** An array of map style objects. */
   styles?: Array<Object>,
 
-  /** Over ride the default modes with your own. */
-  modes?: Object,
+  /** 
+   * Over ride the default modes with your own.
+   * Can accepts a function. That function will receive the default modes as the first argument
+   */
+  modes?: Object | Function,
 
   /** The mode that will used. */
   mode?: String,
@@ -256,7 +259,9 @@ class Draw extends React.PureComponent<Props> {
       },
       displayControlsDefault: this.props.displayControlsDefault,
       styles: this.props.styles,
-      modes: this.props.modes,
+      modes: typeof this.props.modes === 'function'
+        ? this.props.modes(this.constructor.defaultProps.modes)
+        : this.props.modes,
       defaultMode: this.props.mode,
       userProperties: this.props.userProperties
     }, this.props.position);
