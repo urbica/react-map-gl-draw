@@ -1,13 +1,13 @@
 {
-  "main.js": "/build/main.24f26b05.js",
-  "runtime~main.js": "/build/bundle.83e147d9.js",
+  "main.js": "/build/main.e2c3ba2d.js",
+  "runtime~main.js": "/build/bundle.feb19782.js",
   "static/css/2.648a87ef.chunk.css": "/static/css/2.648a87ef.chunk.css",
-  "build/2.278ac61a.js": "/build/2.278ac61a.js",
+  "build/2.5604371f.js": "/build/2.5604371f.js",
   "index.html": "/index.html",
-  "precache-manifest.3787f676f095a30a40d81fd6bca79ab8.js": "/precache-manifest.3787f676f095a30a40d81fd6bca79ab8.js",
+  "precache-manifest.249956ff4b60424ddfa59b2e725b00ac.js": "/precache-manifest.249956ff4b60424ddfa59b2e725b00ac.js",
   "service-worker.js": "/service-worker.js",
   "static/css/2.648a87ef.chunk.css.map": "/static/css/2.648a87ef.chunk.css.map",
-  "static/media/basic-usage.md": "/static/media/basic-usage.66a0bbf4.md",
-  "static/media/change-mode.md": "/static/media/change-mode.36b7864a.md",
-  "static/media/set-initial-features.md": "/static/media/set-initial-features.d417ba3e.md"
+  "static/media/basic-usage.md": "/static/media/basic-usage.dcead28f.md",
+  "static/media/change-mode.md": "/static/media/change-mode.4c139d5f.md",
+  "static/media/set-initial-features.md": "/static/media/set-initial-features.6e763d6d.md"
 }
