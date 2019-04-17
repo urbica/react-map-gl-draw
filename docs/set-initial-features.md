@@ -1,7 +1,9 @@
-```jsx
+```js
 import React from 'react';
 import MapGL from '@urbica/react-map-gl';
-import Draw from '@urbica/react-map-gl-draw';  
+import Draw from '@urbica/react-map-gl-draw';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';  
 
 initialState = {
   data: {

@@ -7,6 +7,10 @@ React Component to enhance [Urbica's React Map GL](https://github.com/urbica/rea
 - [Examples](#examples)
 - [Development](#development)
 
+## Installation
+
+    npm i mapbox-gl @mapbox/mapbox-gl-draw @urbica/react-map-gl @urbica/react-map-gl-draw
+
 ## Examples
 
 You can see examples & documentation [here](https://urbica.github.io/react-map-gl-draw/).
