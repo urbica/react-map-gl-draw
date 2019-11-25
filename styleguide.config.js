@@ -13,7 +13,8 @@ module.exports = {
       components: () => [
         'docs/basic-usage.md',
         'docs/set-initial-features.md',
-        'docs/change-mode.md'
+        'docs/change-mode.md',
+        'docs/change-control-position.md'
       ],
       exampleMode: 'expand'
     },
