@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.3.2](https://github.com/urbica/react-map-gl-draw/compare/v0.3.1...v0.3.2) (2019-11-26)
+
+
+### Bug Fixes
+
+* position prop is working correctly ([#12](https://github.com/urbica/react-map-gl-draw/issues/12)) ([ee1af2a](https://github.com/urbica/react-map-gl-draw/commit/ee1af2a9382a1773d12da534d5ea713ea22f1a34)), closes [#5](https://github.com/urbica/react-map-gl-draw/issues/5)
 
 ## [0.3.1](https://github.com/urbica/react-map-gl-draw/compare/v0.3.0...v0.3.1) (2019-04-17)
 
