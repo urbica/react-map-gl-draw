@@ -1,23 +1,14 @@
 {
-  "files": {
-    "main.js": "/build/main.50f59ff0.js",
-    "runtime-main.js": "/build/bundle.bc3e1207.js",
-    "static/css/2.de4b80e8.chunk.css": "/static/css/2.de4b80e8.chunk.css",
-    "build/2.e92c52ea.js": "/build/2.e92c52ea.js",
-    "build/2.e92c52ea.js.LICENSE": "/build/2.e92c52ea.js.LICENSE",
-    "index.html": "/index.html",
-    "precache-manifest.70d47047f45f50b73f2b0474c9a69d19.js": "/precache-manifest.70d47047f45f50b73f2b0474c9a69d19.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.de4b80e8.chunk.css.map": "/static/css/2.de4b80e8.chunk.css.map",
-    "static/media/basic-usage.md": "/static/media/basic-usage.dcead28f.md",
-    "static/media/change-control-position.md": "/static/media/change-control-position.0aa5f0c3.md",
-    "static/media/change-mode.md": "/static/media/change-mode.4c139d5f.md",
-    "static/media/set-initial-features.md": "/static/media/set-initial-features.6e763d6d.md"
-  },
-  "entrypoints": [
-    "build/bundle.bc3e1207.js",
-    "static/css/2.de4b80e8.chunk.css",
-    "build/2.e92c52ea.js",
-    "build/main.50f59ff0.js"
-  ]
+  "main.js": "/build/main.220a0f38.js",
+  "runtime~main.js": "/build/bundle.feb19782.js",
+  "static/css/2.1e0e34e8.chunk.css": "/static/css/2.1e0e34e8.chunk.css",
+  "build/2.0d344122.js": "/build/2.0d344122.js",
+  "index.html": "/index.html",
+  "precache-manifest.0be0d97835fd1c82d02ec6a4cd183621.js": "/precache-manifest.0be0d97835fd1c82d02ec6a4cd183621.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/2.1e0e34e8.chunk.css.map": "/static/css/2.1e0e34e8.chunk.css.map",
+  "static/media/basic-usage.md": "/static/media/basic-usage.dcead28f.md",
+  "static/media/change-control-position.md": "/static/media/change-control-position.0aa5f0c3.md",
+  "static/media/change-mode.md": "/static/media/change-mode.4c139d5f.md",
+  "static/media/set-initial-features.md": "/static/media/set-initial-features.6e763d6d.md"
 }
