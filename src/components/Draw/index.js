@@ -62,9 +62,10 @@ export type Props = {
   /** An array of map style objects. */
   styles?: Array<Object>,
 
-  /** 
+  /**
    * Over ride the default modes with your own.
-   * Can accepts a function. That function will receive the default modes as the first argument
+   * Can accepts a function. That function will receive the default modes as the
+   * first argument
    */
   modes?: Object | Function,
 
@@ -241,9 +242,47 @@ class Draw extends React.PureComponent<Props> {
   };
 
   componentDidMount() {
+    this._createControl();
+  }
+
+  componentDidUpdate(prevProps: Props) {
+    if (this.props.data) {
+      // $FlowFixMe
+      this._draw.set(this.props.data);
+    }
+
+    if (prevProps.position !== this.props.position) {
+      // $FlowFixMe
+      this._map.removeControl(this._draw);
+      this._createControl();
+    }
+
+    if (prevProps.mode !== this.props.mode) {
+      // $FlowFixMe
+      this._draw.changeMode(this.props.mode, this.props.modeOptions);
+    }
+  }
+
+  componentWillUnmount(): void {
+    // $FlowFixMe
+    if (!this._map || !this._map.getStyle()) {
+      return;
+    }
+
+    // $FlowFixMe
+    this._map.removeControl(this._draw);
+  }
+
+  getDraw() {
+    // $FlowFixMe
+    return this._draw;
+  }
+
+  _createControl = () => {
     // $FlowFixMe
     const map = this._map;
-    const draw = new MapboxDraw({
+    // $FlowFixMe
+    this._draw = new MapboxDraw({
       keybindings: this.props.keybindings,
       touchEnabled: this.props.touchEnabled,
       boxSelect: this.props.boxSelect,
@@ -264,9 +303,9 @@ class Draw extends React.PureComponent<Props> {
         : this.props.modes,
       defaultMode: this.props.mode,
       userProperties: this.props.userProperties
-    }, this.props.position);
+    });
 
-    map.addControl(draw);
+    map.addControl(this._draw, this.props.position);
     map.on('draw.create', this._onDrawCreate);
     map.on('draw.create', this._onChange);
     map.on('draw.delete', this._onDrawDelete);
@@ -283,39 +322,10 @@ class Draw extends React.PureComponent<Props> {
     map.on('draw.actionable', this._onDrawActionable);
 
     if (this.props.data) {
-      draw.add(this.props.data);
-    }
-
-    // $FlowFixMe
-    this._draw = draw;
-  }
-
-  componentDidUpdate(prevProps: Props) {
-    if (this.props.data) {
       // $FlowFixMe
-      this._draw.set(this.props.data);
+      this._draw.add(this.props.data);
     }
-
-    if (prevProps.mode !== this.props.mode) {
-      // $FlowFixMe
-      this._draw.changeMode(this.props.mode, this.props.modeOptions);
-    }
-  }
-
-  componentWillUnmount(): void {
-    // $FlowFixMe
-    if (!this._map || !this._map.getStyle()) {
-      return;
-    }
-
-    // $FlowFixMe
-    this._draw.onRemove();
-  }
-
-  getDraw() {
-    // $FlowFixMe
-    return this._draw;
-  }
+  };
 
   _onChange = () => {
     const { onChange } = this.props;
