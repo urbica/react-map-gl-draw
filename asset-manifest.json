@@ -1,14 +1,23 @@
 {
-  "main.js": "/build/main.220a0f38.js",
-  "runtime~main.js": "/build/bundle.feb19782.js",
-  "static/css/2.1e0e34e8.chunk.css": "/static/css/2.1e0e34e8.chunk.css",
-  "build/2.0d344122.js": "/build/2.0d344122.js",
-  "index.html": "/index.html",
-  "precache-manifest.0be0d97835fd1c82d02ec6a4cd183621.js": "/precache-manifest.0be0d97835fd1c82d02ec6a4cd183621.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/2.1e0e34e8.chunk.css.map": "/static/css/2.1e0e34e8.chunk.css.map",
-  "static/media/basic-usage.md": "/static/media/basic-usage.dcead28f.md",
-  "static/media/change-control-position.md": "/static/media/change-control-position.0aa5f0c3.md",
-  "static/media/change-mode.md": "/static/media/change-mode.4c139d5f.md",
-  "static/media/set-initial-features.md": "/static/media/set-initial-features.6e763d6d.md"
+  "files": {
+    "main.js": "/build/main.9faf2664.js",
+    "runtime-main.js": "/build/bundle.b1e58a59.js",
+    "static/css/2.f2bcb42c.chunk.css": "/static/css/2.f2bcb42c.chunk.css",
+    "build/2.859d3388.js": "/build/2.859d3388.js",
+    "build/2.859d3388.js.LICENSE.txt": "/build/2.859d3388.js.LICENSE.txt",
+    "index.html": "/index.html",
+    "precache-manifest.5484cd46776b75839855afe2519a1e36.js": "/precache-manifest.5484cd46776b75839855afe2519a1e36.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.f2bcb42c.chunk.css.map": "/static/css/2.f2bcb42c.chunk.css.map",
+    "static/media/basic-usage.md": "/static/media/basic-usage.ef418092.md",
+    "static/media/change-control-position.md": "/static/media/change-control-position.a500e44c.md",
+    "static/media/change-mode.md": "/static/media/change-mode.eabf6374.md",
+    "static/media/set-initial-features.md": "/static/media/set-initial-features.a6a63266.md"
+  },
+  "entrypoints": [
+    "build/bundle.b1e58a59.js",
+    "static/css/2.f2bcb42c.chunk.css",
+    "build/2.859d3388.js",
+    "build/main.9faf2664.js"
+  ]
 }
