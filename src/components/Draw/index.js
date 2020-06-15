@@ -2,9 +2,9 @@
 
 import * as React from 'react';
 import { MapContext } from '@urbica/react-map-gl';
-import MapboxDraw from '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw';
+import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import theme from '@mapbox/mapbox-gl-draw/src/lib/theme';
-import modes from '@mapbox/mapbox-gl-draw/src/modes';
+import { modes } from '@mapbox/mapbox-gl-draw';
 
 export type Props = {
   /** Draw controls position */
@@ -252,8 +252,7 @@ class Draw extends React.PureComponent<Props> {
     }
 
     if (prevProps.position !== this.props.position) {
-      // $FlowFixMe
-      this._map.removeControl(this._draw);
+      this._removeControl()
       this._createControl();
     }
 
@@ -264,13 +263,7 @@ class Draw extends React.PureComponent<Props> {
   }
 
   componentWillUnmount(): void {
-    // $FlowFixMe
-    if (!this._map || !this._map.getStyle()) {
-      return;
-    }
-
-    // $FlowFixMe
-    this._map.removeControl(this._draw);
+    this._removeControl()
   }
 
   getDraw() {
@@ -326,6 +319,33 @@ class Draw extends React.PureComponent<Props> {
       this._draw.add(this.props.data);
     }
   };
+
+  _removeControl = () => {
+    // $FlowFixMe
+    const map = this._map;
+
+    if (!map || !map.getStyle()) {
+      return;
+    }
+
+    map.off('draw.create', this._onDrawCreate);
+    map.off('draw.create', this._onChange);
+    map.off('draw.delete', this._onDrawDelete);
+    map.off('draw.delete', this._onChange);
+    map.off('draw.combine', this._onDrawCombine);
+    map.off('draw.combine', this._onChange);
+    map.off('draw.uncombine', this._onDrawUncombine);
+    map.off('draw.uncombine', this._onChange);
+    map.off('draw.update', this._onDrawUpdate);
+    map.off('draw.update', this._onChange);
+    map.off('draw.selectionchange', this._onDrawSelectionchange);
+    map.off('draw.modechange', this._onDrawModechange);
+    map.off('draw.render', this._onDrawRender);
+    map.off('draw.actionable', this._onDrawActionable);
+
+    // $FlowFixMe
+    map.removeControl(this._draw);
+  }
 
   _onChange = () => {
     const { onChange } = this.props;
