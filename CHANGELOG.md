@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.4](https://github.com/urbica/react-map-gl-draw/compare/v0.3.3...v0.3.4) (2020-06-16)
+
+
+### Bug Fixes
+
+* 🐛 add missing publish scripts ([5ffc885](https://github.com/urbica/react-map-gl-draw/commit/5ffc8852472a6a5b916236b7366ebeabae3fa584))
+
 ### [0.3.3](https://github.com/urbica/react-map-gl-draw/compare/v0.3.2...v0.3.3) (2020-06-15)
 
 
