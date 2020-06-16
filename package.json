@@ -8,6 +8,9 @@
   },
   "main": "dist/react-map-gl-draw.cjs.js",
   "module": "dist/react-map-gl-draw.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "npm run styleguide",
     "build": "rollup -c",
@@ -15,8 +18,10 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "styleguide:deploy": "gh-pages -d styleguide",
-    "release": "standard-version",
-    "cz": "git-cz"
+    "release": "npm run build && standard-version",
+    "cz": "git-cz",
+    "prepublishOnly": "npm run build",
+    "postpublish": "npm run styleguide:build && npm run styleguide:deploy"
   },
   "peerDependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.1",
