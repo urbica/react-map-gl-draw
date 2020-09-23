@@ -4,7 +4,8 @@ import * as React from 'react';
 import { MapContext } from '@urbica/react-map-gl';
 import MapboxDraw from '@mapbox/mapbox-gl-draw';
 import theme from '@mapbox/mapbox-gl-draw/src/lib/theme';
-import { modes } from '@mapbox/mapbox-gl-draw';
+
+const modes = MapboxDraw.modes;
 
 export type Props = {
   /** Draw controls position */
