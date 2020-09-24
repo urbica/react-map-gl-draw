@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.5](https://github.com/urbica/react-map-gl-draw/compare/v0.3.4...v0.3.5) (2020-09-24)
+
+
+### Features
+
+* upgrade mapbox-gl-draw to v1.2.0 ([#19](https://github.com/urbica/react-map-gl-draw/issues/19)) (h/t [danielpza](https://github.com/danielpza)) ([be60843](https://github.com/urbica/react-map-gl-draw/commit/be6084384f5ceb1a68ba630a399b932aebaaf507))
+
 ### [0.3.4](https://github.com/urbica/react-map-gl-draw/compare/v0.3.3...v0.3.4) (2020-06-16)
 
 
