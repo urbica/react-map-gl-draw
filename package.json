@@ -20,7 +20,7 @@
     "styleguide:deploy": "gh-pages -d styleguide",
     "release": "npm run build && standard-version",
     "cz": "git-cz",
-    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "postpublish": "npm run styleguide:build && npm run styleguide:deploy"
   },
   "peerDependencies": {
