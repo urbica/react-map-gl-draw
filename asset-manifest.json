@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/build/main.29e37ef5.js",
+    "main.js": "/build/main.a356316e.js",
     "runtime-main.js": "/build/bundle.b1e58a59.js",
     "static/css/2.f2bcb42c.chunk.css": "/static/css/2.f2bcb42c.chunk.css",
     "build/2.b70fdd47.js": "/build/2.b70fdd47.js",
     "build/2.b70fdd47.js.LICENSE.txt": "/build/2.b70fdd47.js.LICENSE.txt",
     "index.html": "/index.html",
-    "precache-manifest.e9596e815749c7e965efc8cc0140e1d0.js": "/precache-manifest.e9596e815749c7e965efc8cc0140e1d0.js",
+    "precache-manifest.4d89f1fee7ffbd7ba120085b9ff79d79.js": "/precache-manifest.4d89f1fee7ffbd7ba120085b9ff79d79.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.f2bcb42c.chunk.css.map": "/static/css/2.f2bcb42c.chunk.css.map",
     "static/media/basic-usage.md": "/static/media/basic-usage.ef418092.md",
@@ -18,6 +18,6 @@
     "build/bundle.b1e58a59.js",
     "static/css/2.f2bcb42c.chunk.css",
     "build/2.b70fdd47.js",
-    "build/main.29e37ef5.js"
+    "build/main.a356316e.js"
   ]
 }
