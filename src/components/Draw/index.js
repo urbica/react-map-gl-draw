@@ -252,7 +252,15 @@ class Draw extends React.PureComponent<Props> {
       this._draw.set(this.props.data);
     }
 
-    if (prevProps.position !== this.props.position) {
+    const controlsChanged = prevProps.pointControl !== this.props.pointControl ||
+      prevProps.lineStringControl !== this.props.lineStringControl ||
+      prevProps.polygonControl !== this.props.polygonControl ||
+      prevProps.trashControl !== this.props.trashControl ||
+      prevProps.combineFeaturesControl !== this.props.combineFeaturesControl ||
+      prevProps.uncombineFeaturesControl !== this.props.uncombineFeaturesControl ||
+      prevProps.displayControlsDefault !== this.props.displayControlsDefault
+
+    if (prevProps.position !== this.props.position || controlsChanged) {
       this._removeControl()
       this._createControl();
     }
