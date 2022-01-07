@@ -8,7 +8,9 @@
   },
   "main": "dist/react-map-gl-draw.cjs.js",
   "module": "dist/react-map-gl-draw.esm.js",
+  "types": "src/index.d.ts",
   "files": [
+    "src/index.d.ts",
     "dist"
   ],
   "scripts": {
@@ -31,6 +33,8 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/preset-flow": "^7.10.1",
     "@mapbox/mapbox-gl-draw": "^1.2.0",
+    "@types/mapbox__mapbox-gl-draw": "^1.2.3",
+    "@types/react": "^16.9.56",
     "@urbica/react-map-gl": "^1.14.2",
     "eslint-config-urbica": "^3.0.0",
     "flow-bin": "^0.97",
