@@ -39,7 +39,7 @@
     "mapbox-gl": "^1.12.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
+    "react-scripts": "^5.0.1",
     "react-styleguidist": "^11.0.8",
     "rollup": "^2.16.1",
     "rollup-plugin-babel": "^4.4.0",
